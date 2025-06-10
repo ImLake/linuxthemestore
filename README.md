@@ -1,10 +1,9 @@
 # LinuxThemesStore
 ## _NativeWay to install linux themes on your desktop_
 
--  A modern desktop app for discovering, downloading Linux themes, directly from Pling & Opendesktop  
+-  A modern desktop app for discovering, downoading Linux themes, directly from Pling & Opendesktop.
 - No browser required.
 - Just browse, click, and beautify your desktop!
-- Supports GTK, GNOME Shell, icon, cursor, and KDE Plasma themes.
 
 Here are some screenshots & video preview
 
@@ -22,9 +21,20 @@ For Arch Linux Build is available in aur..
 yay -S linuxthemestore-git
 ```
 ## _Binary build_
-Installation
+
+To build this application from source, you'll need the following development tools and libraries installed on your system:
+* **Build System** Meson, Ninja
+* **Compilers & Toolchains:** Rust (with Cargo), C/C++ Compiler (e.g., GCC, Clang)
+* **Development Libraries:**
+    * GNOME Development Libraries (including GTK3, GTK4, GLib, GIO, Graphene, Libadwaita)
+        * *Use Gnome SDK for an easier experience*
+    * OpenSSL development headers
+* **Utilities:** pkg-config, gettext, Git
+
+**Installation**
+
 ```sh
-git clone https://github.com/debasish-patra-1987/linuxthemestore.git
+git clone [https://github.com/debasish-patra-1987/linuxthemestore.git](https://github.com/debasish-patra-1987/linuxthemestore.git)
 cd linuxthemestore
 meson setup builddir --prefix=/usr
 meson compile -C builddir
