@@ -1,13 +1,7 @@
 project('linuxthemestore', 'rust', version: '0.1.0')
 
-dependency('glib-2.0')
-dependency('gio-2.0')
-dependency('gtk+-3.0')
-
 subdir('assets')
 
-i18n = import('i18n')
-gnome = import('gnome')
 cargo = find_program('cargo', required: true)
 sources = [
     'src/main.rs',
@@ -32,7 +26,6 @@ cargo_release = custom_target(
   ]
 )
 
-
 # Install the app icon
 install_data(
   'assets/io.github.debasish_patra_1987.linuxthemestore.svg',
@@ -56,9 +49,3 @@ install_data('assets/io.github.debasish_patra_1987.linuxthemestore.metainfo.xml'
   install_dir: join_paths(get_option('datadir'), 'metainfo'),
   install_mode: ['rwxr-xr-x']
 )
-
-gnome.post_install(
-    gtk_update_icon_cache: true,
-    update_desktop_database: true,
-)
-

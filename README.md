@@ -26,8 +26,7 @@ To build this application from source, you'll need the following development too
 * **Build System** Meson, Ninja
 * **Compilers & Toolchains:** Rust (with Cargo), C/C++ Compiler (e.g., GCC, Clang)
 * **Development Libraries:**
-    * GNOME Development Libraries (including GTK3, GTK4, GLib, GIO, Graphene, Libadwaita)
-        * *Use Gnome SDK for an easier experience*
+    * Qt Development Libraries (Qt5 or Qt6)
     * OpenSSL development headers
 * **Utilities:** pkg-config, gettext, Git
 
